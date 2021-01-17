@@ -1,11 +1,29 @@
 /* Features */
 
-.features.list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .features.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -30px;
+  }
 }
 
-.features.list .item:not(:last-child) {
-  margin-right: 30px;
+.features.list .item {
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: unset;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .features.list .item::before {
@@ -43,9 +61,13 @@ background-image: url('../images/clock1.svg');
   line-height: 1.14;
   text-transform: uppercase;
   color: $title-text-color;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
-.feature-item {
+.feature-text {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
