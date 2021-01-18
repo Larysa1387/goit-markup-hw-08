@@ -355,7 +355,7 @@ h2, h3 {
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .container {
     width: 768px;
   }
@@ -391,7 +391,7 @@ a {
   overflow: hidden;
 }
 
-.top-header, .main-nav, .nav-contacts .link, .clients .list, .client.link, .modal .close-btn, .accept-field {
+.top-header, .main-nav, .nav-contacts .link, .clients.list .item, .client.link, .modal .close-btn, .accept-field {
   display: flex;
   align-items: center;
 }
@@ -655,14 +655,23 @@ a {
   justify-content: space-between;
 }
 
-.about-us.title,
-.team-title,
-.clients-title {
+.about-us.title {
   margin-top: 0;
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.17;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .about-us.title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 1.18;
+    text-align: center;
+    line-height: 1.17;
+  }
 }
 
 .thumb {
@@ -690,6 +699,25 @@ a {
 /* block team */
 .our-team {
   background-color: #F5F4FA;
+}
+
+.team-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .team-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 1.18;
+    text-align: center;
+    line-height: 1.17;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -785,27 +813,89 @@ a {
 }
 
 /* block our clients */
+.clients-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 36px;
+    line-height: 1.18;
+    text-align: center;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
+
 .clients .list {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.clients.list .item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 480px) {
+  .clients .list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
-.client.link {
+.clients.list .item {
   justify-content: center;
-  width: 170px;
+  width: 210px;
   height: 90px;
-  color: #AFB1B8;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
+  color: #AFB1B8;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client.link:hover, .client.link:focus {
+.clients.list .item:hover, .clients.list .item:focus {
   border: 1px solid #2196F3;
   color: #2196F3;
+}
+
+.clients.list .item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .clients.list .item:not(:last-child) {
+    margin-bottom: unset;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .clients.list .item {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients.list .item {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients.list .item {
+    width: 170px;
+  }
+}
+
+.client.link {
+  width: 100%;
+  justify-content: center;
 }
 
 .client-icon {

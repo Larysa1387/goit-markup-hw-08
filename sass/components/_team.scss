@@ -4,13 +4,20 @@
   background-color: $primary-background;
 }
 
+.team-title {
+  @include section-title(28px);
+  @media screen and (min-width: 1200px) {
+    @include section-title(36px);
+    line-height: 1.17;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team.list {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
-    // justify-content: space-between;
   }
 }
 .team .item {

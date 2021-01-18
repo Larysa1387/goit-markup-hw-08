@@ -12,10 +12,12 @@
   justify-content: space-between;
 }
 
-.about-us.title,
-.team-title,
-.clients-title {
-  @include section-title(36px);
+.about-us.title {
+  @include section-title(28px);
+  @media screen and (min-width: 1200px) {
+    @include section-title(36px);
+    line-height: 1.17;
+  }
 }
 
 .thumb {
