@@ -708,6 +708,16 @@ a {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+.team .item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .team .item:not(:last-child) {
+    margin-bottom: unset;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .team .item {
     width: 354px;
@@ -724,11 +734,17 @@ a {
 
 .team .align {
   box-sizing: border-box;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 24px;
   text-align: center;
   font-size: 16px;
   line-height: 1.9;
+}
+
+@media screen and (min-width: 1200px) {
+  .team .align {
+    padding-bottom: 30px;
+  }
 }
 
 .team-member {
