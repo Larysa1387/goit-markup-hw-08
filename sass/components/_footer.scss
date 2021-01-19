@@ -6,13 +6,27 @@
 }
 
 .container.align {
-  // display: flex;
-  align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
 
 .align .contacts {
+  text-align: center;
   width: 231px;
-  margin-right: 70px;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer .logo {
@@ -28,8 +42,17 @@
   font-style: normal;
 }
 
+.address.list {
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: unset;
+  }
+}
+
 .address.list .list-item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  // margin-bottom: 9px;
+
 }
 
 .link.contacts {
@@ -37,9 +60,13 @@
 }
 
 .container.align .sign {
-  margin-right: 93px;
+  text-align: center;
   width: 206px;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
+
 
 .sign-in {
   display: block;
@@ -55,6 +82,10 @@
 
 .nets.list {
   display: flex;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: unset;
+  }
 }
 
 .nets.list .social-nets:not(:last-child) {
@@ -102,32 +133,58 @@
 
 
 /* Subscribe  */
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  @media screen and (min-width: 1200px){
+    flex-direction: column;
+    align-items: flex-start;
+    width: unset;
+  }
+}
+
 .form-subscribe {
-  // display: flex;
-  justify-content: start;
-  width: 570px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .subscribe-field {
+  width: 100%;
   position: relative;
+  text-align: center;
 }
 
 .subscribe-input {
-  display: flex;
-  width: 358px;
+  // display: flex;
+  width: 100%;
+  margin-bottom: 20px;
   padding: 15px 16px;
-  margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: inherit;
   color: rgba(255, 255, 255, 0.6);
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .subscribe-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
-  /* color: rgba(255, 255, 255, 0.6); */
 }
 
 .subscribe-btn {
