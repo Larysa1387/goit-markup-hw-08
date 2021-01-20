@@ -14,7 +14,7 @@
 // })();
 
 
-   const refs = {
+const refs = {
       openModalBtn: document.querySelector("[data-modal-open]"),
       closeModalBtn: document.querySelector("[data-modal-close]"),
       backdrop: document.querySelector("[data-modal]"),
@@ -25,8 +25,9 @@
 
   refs.backdrop.addEventListener("click", logBackdropClick);
 
-  function toggleModal() {
-      refs.backdrop.classList.toggle("is-hidden");
+function toggleModal() {
+    document.body.classList.toggle("modal-open");
+    refs.backdrop.classList.toggle("is-hidden");
   }
 
   function logBackdropClick() {
