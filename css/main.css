@@ -845,7 +845,7 @@ a {
   padding-top: 0;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .about-us.section {
     display: none;
   }
@@ -1642,7 +1642,9 @@ a {
 }
 
 img {
+  height: auto;
   width: 100%;
+  display: block;
 }
 
 .products .item {
